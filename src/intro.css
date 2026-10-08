@@ -1,0 +1,52 @@
+.vybe-intro {
+  font-family: "PP Neue Montreal", sans-serif;
+  text-transform: uppercase;
+  line-height: 0.85;
+}
+
+.vybe-intro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vybe-intro .loader {
+  position: fixed;
+  inset: 0;
+  background: #14161c;
+  color: #e8e2d6;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 40;
+}
+
+.vybe-intro .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 300px;
+  clip-path: polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%);
+}
+
+.vybe-intro .brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.vybe-intro .title {
+  font-size: clamp(2rem, 10vw, 15rem);
+  font-weight: 700;
+}
+
+.vybe-intro .count {
+  position: absolute;
+  top: -1.5rem;
+  left: calc(100% + 1.5rem);
+  overflow: hidden;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}

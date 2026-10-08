@@ -1,0 +1,127 @@
+.mise {
+  --bg: #faf6ef;
+  --grey: #96908c;
+  --dark: #57524f;
+  padding: 2.5vw 0 110vh;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.mise-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 4vw 2.5rem;
+}
+
+.mise-heading {
+  font-size: 2.4vw;
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: var(--dark);
+}
+
+.mise-frame {
+  position: relative;
+  height: min(88vh, 860px);
+  min-height: 640px;
+  margin: 0 1.2vw;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse 58% 52% at 50% 48%, rgba(125, 92, 255, 0.22), transparent 68%),
+    var(--bg);
+  color: var(--dark);
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.mise-glow {
+  position: absolute;
+  inset: 12% 18% 18%;
+  background: radial-gradient(circle, rgba(125, 92, 255, 0.28), transparent 68%);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.mise-type {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12em;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mise-type span {
+  font-size: clamp(5.4rem, 13.2vw, 12.4rem);
+  font-weight: 700;
+  line-height: 0.76;
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #b7b0ff 0%, #d07bff 46%, #7d5cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mise-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  width: max-content;
+  height: 100%;
+  will-change: transform;
+}
+
+.mise-slot {
+  flex: none;
+}
+
+.mise-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(87, 82, 79, 0.16);
+}
+
+.mise-card img.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .mise-heading {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .mise-frame {
+    height: 720px;
+    min-height: 720px;
+  }
+
+  .mise-type span {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .mise-heading {
+    font-size: 5.5vw;
+  }
+}

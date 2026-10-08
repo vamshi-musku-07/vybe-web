@@ -1,0 +1,222 @@
+.play-near {
+  padding: 4.2rem 4vw 4.2rem;
+  background: #f4f1ec;
+  scroll-margin-top: 104px;
+}
+
+.play-head {
+  max-width: 1120px;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.play-head h2 {
+  margin: 0;
+  color: #1c2a44;
+  font-size: clamp(2.4rem, 4.6vw, 3.7rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.play-head p {
+  margin: 0.9rem 0 0;
+  color: #8d929a;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.play-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  grid-template-rows: 0.72fr 1fr;
+  gap: 16px;
+  max-width: 1120px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+.story-card {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.card-park {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.card-kart {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+.card-bowl {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.card-kids {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.story-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-park img {
+  object-position: center 62%;
+}
+
+.card-kart img {
+  object-position: center center;
+}
+
+.card-bowl img {
+  object-position: center 40%;
+}
+
+.card-kids img {
+  object-position: center 42%;
+}
+
+.story-copy {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 1.2rem 0;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+.story-copy h3 {
+  margin: 0;
+  max-width: 12ch;
+  font-size: clamp(1.35rem, 1.7vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.story-copy p {
+  margin: 0.45rem 0 0;
+  max-width: 24ch;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.story-copy button {
+  margin-top: 0.75rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-park .story-copy {
+  color: #fff;
+}
+
+.card-park .story-copy p {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.card-park .story-copy button {
+  background: #f2c14e;
+  color: #1a1230;
+}
+
+.card-kart .story-copy {
+  max-width: 280px;
+  color: #161616;
+}
+
+.card-kart .story-copy p {
+  color: #242424;
+}
+
+.card-kart .story-copy button {
+  background: #111;
+  color: #fff;
+}
+
+.card-bowl .story-copy {
+  color: #fff;
+}
+
+.card-bowl .story-copy p {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.card-bowl .story-copy button {
+  background: #1f7f86;
+  color: #fff;
+}
+
+.card-kids .story-copy {
+  color: #142033;
+}
+
+.card-kids .story-copy p {
+  color: #243044;
+}
+
+.card-kids .story-copy button {
+  background: #e07a62;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .play-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .card-park,
+  .card-kart,
+  .card-bowl,
+  .card-kids {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .card-park {
+    grid-column: 1 / -1;
+    aspect-ratio: 3 / 4;
+  }
+
+  .card-kart {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 7;
+  }
+
+  .card-bowl,
+  .card-kids {
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .play-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .card-bowl,
+  .card-kids {
+    aspect-ratio: 1 / 1.05;
+  }
+}

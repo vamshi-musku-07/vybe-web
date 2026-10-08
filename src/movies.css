@@ -1,0 +1,129 @@
+.movies-stand {
+  --font: "Outfit", Arial, sans-serif;
+  --bg: #faf6ef;
+  --grey: #96908c;
+  --pink: #f22a72;
+  --dark: #57524f;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding: 8vw 4vw 5vw;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.movies-stand .stand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.movies-stand .stand-heading {
+  font-size: 4vw;
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: var(--dark);
+}
+
+.movies-stand .stand-sub {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+  color: var(--grey);
+  max-width: 28rem;
+}
+
+.movies-stand .movies-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.movies-stand .cards-stage {
+  perspective: 1560px;
+  perspective-origin: 50% 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.movies-stand .movie-card {
+  width: calc((100% - 5 * 1.25rem) / 6);
+  flex-shrink: 0;
+  min-width: 0;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(87, 82, 79, 0.08);
+  will-change: transform;
+}
+
+.movies-stand .movie-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.movies-stand .movie-card-body {
+  padding: 0.75rem 0.8rem 0.9rem;
+}
+
+.movies-stand .movie-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movies-stand .movie-meta {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--grey);
+}
+
+@media (max-width: 1100px) {
+  .movies-stand .cards-stage {
+    flex-wrap: wrap;
+  }
+
+  .movies-stand .movie-card {
+    width: calc((100% - 2 * 1.25rem) / 3);
+  }
+
+  .movies-stand .stand-heading {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .movies-stand .movie-card {
+    width: calc((100% - 1.25rem) / 2);
+  }
+
+  .movies-stand .stand-heading {
+    font-size: 8.5vw;
+  }
+}
